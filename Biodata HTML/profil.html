@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profle Card Rayhanz </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      var d = new Date();
+      document.write("<b>Waktu saat ini:</b> " + d.toLocaleString() + "<br>");
+    </script>
+
+    <script> 
+      var user = prompt("Masukan Username"); 
+      var pass = prompt("Masukan Password"); 
+        if(user == "rayhanz audwianza hermawan"){ 
+           if(pass == "rayhanz2001"){ 
+           document.write(""); 
+          }else { 
+            document.write("Password Salah! Harap Isi Password dengan Benar"); }
+       }else { 
+      document.write("Username dan Password Anda Tidak Terdaftar, Silahkan Hubungi Admin");
+      } 
+      </script> 
+      
+    <div class="card-container">     
+      <span class="pro"><i class="message fas fa-envelope"></i></span>
+      <img class="round" src="assets/Rayhanz.jpg" alt="user" />
+      <div class="text" id="nama"></div>
+      <p> Saya Rayhanz Audwianza Hermawan<br>Mahasiswa Universitas Mercubuana<br>Jurusan Teknik Informatika</p>
+      <div class="buttons">
+        <div class="bottom-section">
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fas fa-link"></i></a>
+          </div>
+      </div>
+        <button class="primary ghost">
+          FOLLOW ME
+        </button>
+      <div class="skills">
+        <h6>Skills</h6>
+        <ul>
+          <li> PHP</li>
+          <li> Oracle</li>
+          <li> C++</li>
+          <li> Mobile Legend</li>
+        </ul>
+      </div>
+    </div>
+    <button onclick="konfirmasi()">Tombol Keterangan</button>
+    <p id="pesan"></p>
+    <script>
+      function konfirmasi(){
+         var tanya = confirm("Apakah Anda ingin melihat keterangan?");
+ 
+         if(tanya === true) {
+            pesan = "Website ini di buat untuk melaksanakan tugas dan forum mata kuliah pemrogaman web";
+         }else{
+            pesan = "Yasudah tidak apa-apa apabila berubah pikiran silakan klik kembali tombol keterangan";
+         }
+ 
+         document.getElementById("pesan").innerHTML = pesan;
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+  <div class="mhs">
+    <form action="#" method="POST" onSubmit="validasi()">
+      <label for="komentar">Komentar</label>
+        <input type="text" id="komentar" name="komentar" placeholder="Komentar...">
+        <label for="rating"></label>
+            <select id="rating" name="rating">
+              <option value="0" selected="">--Pilih Rating--</option>
+                <option value="Dt">✰</option>
+                <option value="Cs">✰✰</option>
+                  <option value="Vl">✰✰✰</option>
+                <option value="Ml">✰✰✰✰</option>
+                  <option value="Pm">✰✰✰✰✰</option>
+            </select>
+            <div>
+                <input type="submit" value="Tambahkan" class="tombol">
+            </div>
+        </form>
+    </div>
+<script type="text/javascript">
+    function validasi() {
+      var Komentar = document.getElementById("komentar").value;
+     
+        var value_rating = rating.options[rating.selectedIndex].value;
+        if (Komentar != "" && value_rating !=0) {
+            return true;
+        }else{
+            alert('Semua Data Harus Di Isi');
+        }
+    }
+</script>
+</html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+  max-width: 75%;
+  height: 200%;
+}
